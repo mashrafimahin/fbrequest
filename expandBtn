@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expand button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fff;
+            padding: 5%;
+        }
+        h1 {
+            font-style: 50px;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 1% 0;
+            text-align: justify;
+            height: 200px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .active {
+            height: auto;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is header.</h1>
+    <hr>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, explicabo officia distinctio iusto saepe debitis omnis libero! Aliquid saepe debitis ipsa, molestias perspiciatis ducimus eos eum tempore ullam. Delectus fuga impedit enim at alias quis minus eum numquam asperiores beatae et obcaecati ipsam soluta officiis architecto dolore itaque culpa quisquam, expedita commodi illo neque repudiandae est id? Optio suscipit quibusdam vel adipisci enim quo dolores eum odit nihil, cumque esse aperiam accusantium maxime fuga, assumenda tempora rerum accusamus inventore dignissimos at illum veritatis. Harum quisquam doloribus possimus earum quas ab necessitatibus dolorum similique beatae quis, accusamus cumque eaque nesciunt ut eum consectetur maiores maxime quo tempora. Quos est, in perspiciatis ut facilis quibusdam porro? Rerum maiores neque aliquam quas incidunt corporis natus nemo, ad eveniet ducimus porro veritatis animi blanditiis tempora quia quibusdam. Numquam similique maxime natus porro, nostrum sint blanditiis, est tenetur itaque quibusdam, quia libero delectus labore velit harum. Consectetur doloremque sint quidem magnam sed esse repellat fugiat quod aperiam? Porro quisquam laboriosam debitis fugiat dolorem tenetur, fuga provident eum, modi quos ab illo voluptatibus commodi hic qui autem. Est odio reprehenderit dolorem illo, similique magnam voluptatibus assumenda eaque velit eius debitis consectetur modi expedita exercitationem soluta dicta inventore qui omnis tempora possimus odit voluptate illum perspiciatis dolore. Nobis atque necessitatibus molestiae sequi deserunt labore dolore odit consectetur accusamus eius. Perspiciatis repellendus quis consequuntur tenetur quisquam cumque recusandae, ut quam! Saepe quos ex dolorem eveniet impedit officia, nihil maxime consequatur totam quod, quas non. Doloribus ipsum nobis, molestias quisquam necessitatibus perferendis explicabo magni corrupti facilis ab dolorum vitae alias dolore quos. Deleniti maiores numquam rerum inventore nihil vel dolorum itaque sapiente eveniet ipsum odio ut, dolores illo nulla quaerat vitae, aliquam reprehenderit expedita commodi nesciunt cupiditate. Exercitationem, corporis quibusdam? Quasi aperiam natus autem tempore sed eos animi officiis sapiente quae, magni voluptatem velit cupiditate minima voluptas reiciendis at et ipsa. Corrupti, dolores! Placeat voluptatum quia aspernatur tempore est. Voluptas provident eligendi deserunt quisquam qui corrupti enim, corporis delectus placeat? Debitis neque voluptate consequatur cumque velit et mollitia quos, ratione veniam dolor quod animi ut tempore! Perferendis harum quae excepturi consectetur consequatur recusandae eligendi esse ad rem nobis a assumenda inventore iste voluptatibus corporis nihil suscipit, tenetur debitis. Beatae, perspiciatis quo nulla itaque debitis dolorum iusto laudantium! Quis numquam rem quod deleniti obcaecati quia, odio velit debitis perferendis nam, fugit, error vel quam porro quae molestiae aperiam? Hic, laborum.</p>
+    <button id="btn">Read More</button>
+
+    <script>
+        var btn = document.getElementById('btn');
+        var para = document.getElementById('para');
+
+        btn.onclick = function(expand){
+            if(para.className == 'active'){
+                para.className = '';
+                btn.innerHTML = 'Read More';
+            }
+            else {
+                para.className = 'active';
+                btn.innerHTML = 'Read Less';
+            }
+        }
+
+    </script>
+</body>
+</html>
